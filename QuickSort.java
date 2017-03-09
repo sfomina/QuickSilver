@@ -1,13 +1,6 @@
-/*
-Sasha Fomina
-APCS2 pd4 
-HW15 -- So So Quick 
-2017-03-09
-*/
 
 /*****************************************************
  * class QuickSort
- * (skeleton) <<delete this line if untrue>>
  * Implements quicksort algo to sort an array of ints in place
  *
  * 1. Summary of QuickSort algorithm:
@@ -89,11 +82,11 @@ public class QuickSort
      * @param d -- array of ints to be sorted in place
      *****************************************************/
     
-    public static void qsort(int[] d){
-	qsortH(d, 0, d.length-1);
+    public static void qsort1(int[] d){
+	qsortH1(d, 0, d.length-1);
     }
 
-    public static void qsortH(int[] d, int lower, int uppr){
+    public static void qsortH1(int[] d, int lower, int uppr){
 	//System.out.println("==============");
 	//printArr(d);
 	//System.out.println("lower:" + lower);
@@ -101,6 +94,24 @@ public class QuickSort
 	//System.out.println("=============");
 	if(lower < uppr) {
 	    int pivotPos = partition(d, lower, uppr, uppr);
+	    qsortH(d, lower, pivotPos - 1);
+	    qsortH(d, pivotPos + 1, uppr);
+	}
+    }
+    
+ 
+    public static void qsort2(int[] d){
+	qsortH1(d, 0, d.length-1);
+    }
+
+    public static void qsortH2(int[] d, int lower, int uppr){
+	//System.out.println("==============");
+	//printArr(d);
+	//System.out.println("lower:" + lower);
+	//System.out.println("upper:" + uppr);
+	//System.out.println("=============");
+	if(lower < uppr) {
+	    int pivotPos = partition(d, lower, uppr, (lower+uppr)/2);
 	    qsortH(d, lower, pivotPos - 1);
 	    qsortH(d, pivotPos + 1, uppr);
 	}
@@ -180,7 +191,7 @@ public class QuickSort
 	printArr(arrMatey);
 	/*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+	
     }//end main
 
 }//end class QuickSort
