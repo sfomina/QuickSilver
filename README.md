@@ -4,6 +4,10 @@ QuickSort is our implementation of the quicksort algorithm. The explanation of t
 
 MergeSortTester helps determine the runtime for quicksort.
 
+
+
+![Alt text](https://github.com/sfomina/QuickSilver/blob/master/graphs.PNG?raw=true"Graphs")
+
 # Analysis
 
 The Quicksort algorithm runs a range from O(n*log(n)) to O(n^2), from best to worst case scenario. The algorithm picks a value of partition from the array, and organize the rest of the array into 2 halves: values less than the partition on the left, and values more than the partition on the right. Then, the algorithm branches out using recursion by running itself on the array on the left and the array on the right. If the target array contains only 1 item, then it leaves it as-is. The partition value isn't included in the array being recursed b/c it is alreadu in its correct position. 
