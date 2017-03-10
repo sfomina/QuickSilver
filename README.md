@@ -14,4 +14,6 @@ The Quicksort algorithm runs a range from O(n*log(n)) to O(n^2), from best to wo
 
 In the best case scenario, the algorithm would somehow magically pick up the array's middle value and cut the array exactly in half. In this case, the cutting of the array would O(log(n)), and with a while loop in every call of the algorithm, the total runtime O(n*log(n)). 
 
-In the worst case scenario, the algorithm would somehow pick up the array's largest/smallest value, thus dividing the array in the most skewed way possible.
+In the worst case scenario, the algorithm would somehow pick up the array's largest/smallest value, thus dividing the array in the most skewed way possible. In this case, each cutting would leave one array of size 1 and one of size n-1, thus resulting in a total of O(n^2) runtime.
+
+# Time Trials
