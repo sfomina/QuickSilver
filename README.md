@@ -6,7 +6,7 @@ MergeSortTester helps determine the runtime for quicksort.
 
 
 
-![Alt text](https://github.com/sfomina/QuickSilver/blob/master/graphs.png?raw=true"Graphs")
+
 
 # Analysis
 
@@ -17,3 +17,15 @@ In the best case scenario, the algorithm would somehow magically pick up the arr
 In the worst case scenario, the algorithm would somehow pick up the array's largest/smallest value, thus dividing the array in the most skewed way possible. In this case, each cutting would leave one array of size 1 and one of size n-1, thus resulting in a total of O(n^2) runtime.
 
 # Time Trials
+
+We created a method testArr(int[], double, int) to populate an array of int and calculate its runtime in nanoTime based on the int type.
+
+   type == 0 is used for calculating the avergae runtime
+   type == 1 is used for calculating the best case runtime
+   type == 2 is used for calculating the worst case runtime
+
+For the test arrays, we used array sizes 1000, 1500, 2000, 3000, 4000, 5000. The main method would call on testArr and calculate the runtime, then display it.
+
+The graph is linked below:
+
+![Alt text](https://github.com/sfomina/QuickSilver/blob/master/graphs.png?raw=true"Graphs")
