@@ -6,7 +6,7 @@ MergeSortTester helps determine the runtime for quicksort.
 
 
 
-![Alt text](https://github.com/sfomina/QuickSilver/blob/master/graphs.PNG?raw=true"Graphs")
+(https://github.com/sfomina/QuickSilver/blob/master/graphs.PNG?raw=true"Graphs")
 
 # Analysis
 
