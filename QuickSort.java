@@ -93,9 +93,9 @@ public class QuickSort
 	//System.out.println("upper:" + uppr);
 	//System.out.println("=============");
 	if(lower < uppr) {
-	    int pivotPos = partition(d, lower, uppr, uppr);
-	    qsortH(d, lower, pivotPos - 1);
-	    qsortH(d, pivotPos + 1, uppr);
+	    int pivotPos = partition(d, lower, uppr,lower);
+	    qsortH1(d, lower, pivotPos - 1);
+	    qsortH1(d, pivotPos + 1, uppr);
 	}
     }
     
@@ -112,8 +112,8 @@ public class QuickSort
 	//System.out.println("=============");
 	if(lower < uppr) {
 	    int pivotPos = partition(d, lower, uppr, (lower+uppr)/2);
-	    qsortH(d, lower, pivotPos - 1);
-	    qsortH(d, pivotPos + 1, uppr);
+	    qsortH2(d, lower, pivotPos - 1);
+	    qsortH2(d, pivotPos + 1, uppr);
 	}
     }
     
@@ -127,71 +127,8 @@ public class QuickSort
     //main method for testing
     public static void main( String[] args ) 
     {
-	//int[] arg = {5,4,17,9000,6};
-	///System.out.println("position:" + partition(arg, 0, 4, 2));
-	//printArr(arg);
-	    
-
-	/*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
-	//get-it-up-and-running, static test case:
-	int [] arr1 = {7,1,5,12,3};
-	System.out.println("\narr1 init'd to: " );
-	printArr(arr1);
-
-	qsort( arr1 );	
-       	System.out.println("arr1 after qsort: " );
-	printArr(arr1);
-
-	// randomly-generated arrays of n distinct vals
-	int[] arrN = new int[10];
-	for( int i = 0; i < arrN.length; i++ )
-	    arrN[i] = i;
-       
-	System.out.println("\narrN init'd to: " );
-	printArr(arrN);
-
-       	shuffle(arrN);
-       	System.out.println("arrN post-shuffle: " );
-	printArr(arrN);
-
-	qsort( arrN );
-	System.out.println("arrN after sort: " );
-	printArr(arrN);
-
-
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
 	
-
-	//get-it-up-and-running, static test case w/ dupes:
-	int [] arr2 = {7,1,5,12,3,7};
-	System.out.println("\narr2 init'd to: " );
-	printArr(arr2);
-
-	qsort( arr2 );	
-       	System.out.println("arr2 after qsort: " );
-	printArr(arr2);
-
-
-	// arrays of randomly generated ints
-	int[] arrMatey = new int[20];
-	for( int i = 0; i < arrMatey.length; i++ )
-	    arrMatey[i] = (int)( 48 * Math.random() );
-       
-	System.out.println("\narrMatey init'd to: " );
-	printArr(arrMatey);
-
-       	shuffle(arrMatey);
-       	System.out.println("arrMatey post-shuffle: " );
-	printArr(arrMatey);
-
-	qsort( arrMatey );
-	System.out.println("arrMatey after sort: " );
-	printArr(arrMatey);
-	/*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-	
+     
     }//end main
 
 }//end class QuickSort
