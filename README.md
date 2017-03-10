@@ -6,8 +6,7 @@ MergeSortTester helps determine the runtime for quicksort.
 
 
 
-
-![Alt text](https://github.com/sfomina/Supreme-Pancake/blob/master/graphs.PNG?raw=true"Graphs")
+![Alt text](QuickSilver/graphs.png?raw=true"Graphs")
 
 # Analysis
 
