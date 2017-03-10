@@ -5,20 +5,14 @@
  
 
   BIG-OH CLASSIFICATION OF ALGORITHM: 
-  BEST CASE 
-  WORST CASE
+  BEST CASE : nlogn
+  WORST CASE: n^2
+  AVG CASE: nlogn
  
+  Analysis
 
   Mean execution times for dataset of size n:
   Batch size:10
-  n=1       time: 
-  n=10      time: 
-  n=50      time: 
-  n=100     time: 
-  n=1000    time: 
-
-  ANALYSIS:
-   
     
   ======================================*/
 
