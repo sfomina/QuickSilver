@@ -26,7 +26,7 @@ public class QuickSortTester
 {
 
     /******************************
-     Creates 10 arrays of 1,10,50,100,and 1000 items and finds the avg time in miliseconds it takes to complete a merge sort, printing out a trace diagram for each test case.
+     Creates 10 arrays of 1,10,50,100,and 1000 items and finds the avg time in miliseconds it takes to complete a quick sort, printing out a trace diagram for each test case.
      ******************************/
 
     public static int[] reverseArr(int[] arr){
@@ -38,7 +38,7 @@ public class QuickSortTester
 	return arr;
     }
     
-    public static void testArr(int[] arr, double time, int type){
+    public static double testArr(int[] arr, double time, int type){
 	double startTime ;
 	double endTime;
 
@@ -58,15 +58,15 @@ public class QuickSortTester
 	    //System.out.print(" ....\n");
 
 	    //start stopwatch
-	    startTime = System.currentTimeMillis();
+	    startTime = System.nanoTime();
 	    System.out.println(startTime);
 	    if (type == 0 || type == 2){
-	    QuickSort.qsort1(arr);
+		QuickSort.qsort1(arr);
 	    }
 	    else if (type == 1){
 		QuickSort.qsort2(arr);
 	    }
-	    endTime= System.currentTimeMillis();
+	    endTime = System.nanoTime();
 	    System.out.println(endTime);
 	    time += endTime-startTime;
 	    System.out.println("Time: " + (endTime-startTime));
@@ -74,6 +74,7 @@ public class QuickSortTester
 	}
 
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
+	return time;
     }
     public static void main( String[] args ) 
     {
@@ -92,12 +93,12 @@ public class QuickSortTester
 	double time4000 = 0;
       
 	//AVG CASE
-	testArr(test1000, time1000, 0);
-	testArr(test1500, time1500, 0);
-	testArr(test2000, time2000, 0);	
-	testArr(test3000, time3000, 0);
-	testArr(test4000, time4000, 0);	
-	testArr(test5000, time5000, 0);	
+	time1000 = testArr(test1000, time1000, 0);
+	time1500 = testArr(test1500, time1500, 0);
+	time2000 = testArr(test2000, time2000, 0);	
+	time3000 = testArr(test3000, time3000, 0);
+	time4000 = testArr(test4000, time4000, 0);	
+	time5000 = testArr(test5000, time5000, 0);	
 	
 	System.out.println("~~~~~~~~~~~~~~AVG CASE~~~~~~~~~~~~~~~~~~");
 
@@ -109,7 +110,7 @@ public class QuickSortTester
 	System.out.println("AVG TIME FOR n=3000:" + (time3000 *1.0 / 10));
 	System.out.println("AVG TIME FOR n=4000:" + (time4000 *1.0 / 10));
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	/*
+	
 	//BEST CASE
 	time1000 = 0;
 	time5000 = 0;
@@ -118,12 +119,12 @@ public class QuickSortTester
 	time3000 = 0;
 	time4000 = 0;      
 	
-	testArr(test1000, time1000, 1);
-	testArr(test1500, time1500, 1);
-	testArr(test2000, time2000, 1);	
-	testArr(test3000, time3000, 1);
-	testArr(test4000, time4000, 1);	
-	testArr(test5000, time5000, 1);	
+	time1000 = testArr(test1000, time1000, 1);
+	time1500 = testArr(test1500, time1500, 1);
+	time2000 = testArr(test2000, time2000, 1);	
+	time3000 = testArr(test3000, time3000, 1);
+	time4000 = testArr(test4000, time4000, 1);	
+	time5000 = testArr(test5000, time5000, 1);	
 	
 	System.out.println("~~~~~~~~~~~~~~BEST CASE~~~~~~~~~~~~~~~~~~");
 
@@ -151,12 +152,12 @@ public class QuickSortTester
 	test4000 = reverseArr(test4000);
 	test3000 = reverseArr(test3000);
 
-	testArr(test1000, time1000, 2);
-	testArr(test1500, time1500, 2);
-	testArr(test2000, time2000, 2);	
-	testArr(test3000, time3000, 2);
-	testArr(test4000, time4000, 2);	
-	testArr(test5000, time5000, 2);
+	time1000 = testArr(test1000, time1000, 2);
+	time1500 = testArr(test1500, time1500, 2);
+	time2000 = testArr(test2000, time2000, 2);	
+	time3000 = testArr(test3000, time3000, 2);
+	time4000 = testArr(test4000, time4000, 2);	
+	time5000 = testArr(test5000, time5000, 2);
 
 	System.out.println("~~~~~~~~~~~~~~WORST CASE~~~~~~~~~~~~~~~~~~");
 
@@ -168,7 +169,7 @@ public class QuickSortTester
 	System.out.println("AVG TIME FOR n=3000:" + (time3000 *1.0 / 10));
 	System.out.println("AVG TIME FOR n=4000:" + (time4000 *1.0 / 10));
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        */
+        
     }//end main
 
 }//end class
